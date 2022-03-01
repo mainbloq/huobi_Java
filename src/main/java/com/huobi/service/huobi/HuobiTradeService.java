@@ -137,9 +137,6 @@ public class HuobiTradeService implements TradeClient {
 
   @Override
   public BatchCancelOpenOrdersResult batchCancelOpenOrders(BatchCancelOpenOrdersRequest request) {
-
-    InputChecker.checker()
-        .shouldNotNull(request.getAccountId(), "account-id");
     if (request.getSize() != null) {
       InputChecker.checker()
           .checkRange(request.getSize(), 1, 100, "size");

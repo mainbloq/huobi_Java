@@ -286,7 +286,7 @@ public class HuobiWebSocketConnection extends WebSocketListener implements WebSo
   }
 
   private void onError(String errorMessage, Throwable e) {
-    log.error("[Connection error][" + this.getId() + "] " + errorMessage);
+    log.error("[Connection error][" + this.getId() + "] " + errorMessage, e);
     closeOnError();
   }
 
@@ -377,6 +377,7 @@ public class HuobiWebSocketConnection extends WebSocketListener implements WebSo
     } else {
 
       // 不需要验签的话，直接把命令发出去就好
+      // If you don’t need to verify the signature, just send the order directly
       commandList.forEach(command -> {
         send(command);
       });
@@ -385,7 +386,7 @@ public class HuobiWebSocketConnection extends WebSocketListener implements WebSo
 
   @Override
   public void onFailure(WebSocket webSocket, Throwable t, Response response) {
-    onError("Unexpected error: " + t.getMessage(), t);
+    onError("Unexpected error: " + t.toString(), t);
     closeOnError();
   }
 
@@ -420,6 +421,7 @@ public class HuobiWebSocketConnection extends WebSocketListener implements WebSo
 
   private void sendAuthV2() {
     // 需要验签的部分
+    // The part that needs to be verified
     ApiSignature as = new ApiSignature();
     UrlParamsBuilder builder = UrlParamsBuilder.build();
     try {
