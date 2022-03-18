@@ -6,7 +6,7 @@
 
   <groupId>com.huobi.sdk</groupId>
   <artifactId>huobi-client</artifactId>
-  <version>2.0.6-MAINBLOQ-SNAPSHOT</version>
+  <version>2.0.8-MAINBLOQ-SNAPSHOT</version>
 
   <properties>
     <java.version>1.8</java.version>
@@ -71,7 +71,22 @@
 
 
   </dependencies>
-
+  <distributionManagement>
+    <site>
+      <id>xSOR Maven Information</id>
+      <url>file://p:/qandlestick/xSor/xSor-info-reports</url>
+    </site>
+    <repository>
+      <id>mainbloq-central</id>
+      <name>a0ivwdek0m8sh-artifactory-primary-0-releases</name>
+      <url>https://mainbloq2.jfrog.io/artifactory/mainbloq-xsor-libs-release</url>
+    </repository>
+    <snapshotRepository>
+      <id>mainbloq-snapshots</id>
+      <name>a0ivwdek0m8sh-artifactory-primary-0-snapshots</name>
+      <url>https://mainbloq2.jfrog.io/artifactory/mainbloq-xsor-libs-snapshot</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <build>
     <resources>
