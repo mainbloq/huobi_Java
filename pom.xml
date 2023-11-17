@@ -11,7 +11,7 @@
   <properties>
     <java.version>1.8</java.version>
     <okhttp3.version>4.9.3</okhttp3.version>
-    <fastjson.version>1.2.79</fastjson.version>
+    <fastjson.version>1.2.83</fastjson.version>
     <jacoco-maven-plugin.version>0.8.4</jacoco-maven-plugin.version>
   </properties>
 
@@ -66,7 +66,7 @@
     <dependency>
       <groupId>com.warrenstrange</groupId>
       <artifactId>googleauth</artifactId>
-      <version>1.2.0</version>
+      <version>1.5.0</version>
     </dependency>
 
 
