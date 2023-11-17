@@ -29,7 +29,7 @@
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
-      <version>1.2.7</version>
+      <version>1.2.9</version>
     </dependency>
     <dependency>
       <groupId>org.powermock</groupId>
@@ -53,7 +53,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.22</version>
+      <version>1.18.30</version>
       <scope>provided</scope>
     </dependency>
 
@@ -71,22 +71,22 @@
 
 
   </dependencies>
-  <distributionManagement>
-    <site>
-      <id>xSOR Maven Information</id>
-      <url>file://p:/qandlestick/xSor/xSor-info-reports</url>
-    </site>
-    <repository>
-      <id>mainbloq-central</id>
-      <name>a0ivwdek0m8sh-artifactory-primary-0-releases</name>
-      <url>https://mainbloq2.jfrog.io/artifactory/mainbloq-xsor-libs-release</url>
-    </repository>
-    <snapshotRepository>
-      <id>mainbloq-snapshots</id>
-      <name>a0ivwdek0m8sh-artifactory-primary-0-snapshots</name>
-      <url>https://mainbloq2.jfrog.io/artifactory/mainbloq-xsor-libs-snapshot</url>
-    </snapshotRepository>
-  </distributionManagement>
+<!--  <distributionManagement>-->
+<!--    <site>-->
+<!--      <id>xSOR Maven Information</id>-->
+<!--      <url>file://p:/qandlestick/xSor/xSor-info-reports</url>-->
+<!--    </site>-->
+<!--    <repository>-->
+<!--      <id>mainbloq-central</id>-->
+<!--      <name>a0ivwdek0m8sh-artifactory-primary-0-releases</name>-->
+<!--      <url>https://mainbloq2.jfrog.io/artifactory/mainbloq-xsor-libs-release</url>-->
+<!--    </repository>-->
+<!--    <snapshotRepository>-->
+<!--      <id>mainbloq-snapshots</id>-->
+<!--      <name>a0ivwdek0m8sh-artifactory-primary-0-snapshots</name>-->
+<!--      <url>https://mainbloq2.jfrog.io/artifactory/mainbloq-xsor-libs-snapshot</url>-->
+<!--    </snapshotRepository>-->
+<!--  </distributionManagement>-->
 
   <build>
     <resources>
@@ -98,6 +98,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
